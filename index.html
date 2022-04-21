@@ -4,9 +4,13 @@
   <title>Servisit: Where we let services visit you</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel = "icon" href = "assets/tab_icon.png.png"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
   <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
@@ -22,13 +26,13 @@
     <div class="collapse navbar-collapse clearfix" id="mynavbar">
       <ul class="navbar-nav ms-auto text-center">
         <li class="nav-item">
-          <a class="nav-link active" href="javascript:void(0)">Home</a>
+          <a class="nav-link active" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Services</a>
+          <a class="nav-link" href="service_list.html">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Contact Us</a>
+          <a class="nav-link" href="https://tally.so#tally-open=wo4ROn&tally-layout=modal&tally-align-left=1&tally-auto-close=0">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="javascript:void(0)">About Us</a>
@@ -42,22 +46,93 @@
 </nav>
   
 
-<div id = "header" class = "position-relative">
+<div id = "header" class = "position-relative mb-5">
   <br>
   <div id = "logo-container" class = "ms-5">
     <h1 id = "tagline">We let the services visit you!</h1> 
     <p>Servisit is your all-in-one home service platform that makes finding, booking, and availing services easy and convenient wherever you may be.</p>
-    <button type="button" class="btn btn-lg primary-btn">Book Now!</button>
+    <button data-tally-open="wo4ROn" data-tally-layout="modal" data-tally-align-left="1" data-tally-auto-close="0" type="button" class="btn btn-lg primary-btn">Book Now!</button>
   </div>
   
 </div>
 
-<div class = "container w-75">
+<div id = "main-content" class = "container w-75">
+
+  <h1>Popular Services</h1>
+  <div class = "poplist">
+
+    <div class="polaroid">
+      <a href = "services/computer_services/computer_repair.html" class = "nostyle">
+        <img src="assets/services/computer-repair.jpg" alt="Computer Troubleshoot and Repair" style="width:100%">
+        <div class="container">
+          <p>Computer Troubleshoot and Repair</p>
+        </div>
+      </a>
+      
+    </div>
+
+    <div class="polaroid">
+      <a href = "services/computer_services/computer_upgrade.html">
+        <img src="assets/services/computer-upgrade.jpg" alt="Computer Upgrade" style="width:100%">
+        <div class="container">
+          <p>Computer Upgrade</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="polaroid">
+      <a href = "services/computer_services/computer_clean.html">
+        <img src="assets/services/computer-clean.jpg" alt="Computer Cleaning" style="width:100%">
+        <div class="container">
+          <p>Computer Cleaning</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="polaroid">
+      <img src="assets/services/wiring.jpg" alt="Electrical Manpower" class = "img-fluid">
+      <div class="container">
+        <p>Electrical Manpower</p>
+      </div>
+    </div>
+
+    <div class="polaroid">
+      <a href = "service_list.html" class = "seemore">
+        <img src="assets/servisit_icon.png" alt="Servisit" style="width:100%">
+      </a>
+      <a href = "service_list.html" class = "seemore">
+        <h5>See more</h5>
+      </a>
+      
+      
+    </div>
+  </div>
   
 </div>
 
-<div class="mt-5 p-4 bg-dark text-white text-center">
-  <p>Footer</p>
+<div id = "footer" class="mt-5 p-4 text-white">
+  <div class = "row mx-5 my-3">
+    <div class = "col-sm-3">
+      <h4>Our Mission</h4>
+      <p style = "text-align: justify;">Our mission is to make availing of reliable services easy and convenient whilst uplifting the lives of our dependable providers by giving them more opportunities and benefits.</p>
+
+      <h4 class = "mt-4">Stay in touch!</h4>
+      <div class = "container d-flex">
+        <a href = "https://www.facebook.com/servisitph" target="_blank" class = "nostyle flex-fill">
+          <i class = "bi bi-facebook socials"></i>
+        </a>
+        <a href = "https://www.facebook.com/servisitph" target="_blank" class = "nostyle flex-fill">
+          <i class = "bi bi-instagram socials flex-fill"></i>
+        </a>
+        <a href = "https://www.facebook.com/servisitph" target="_blank" class = "nostyle flex-fill">
+          <i class = "bi bi-google socials flex-fill"></i>
+        </a>
+        
+        
+        
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
