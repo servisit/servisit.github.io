@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 
 div.polaroid {
   width: 20%;
-  min-width: 150px;
+  min-width: 200px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
@@ -110,7 +110,7 @@ div.polaroid {
 
 .poplist {
   display: flex;
-  padding: 20px;
+  padding: 5px;
 }
 
 @media screen and (max-width: 1200px){
@@ -137,7 +137,7 @@ div.polaroid {
   z-index: 1;
 }
 
-.seemore > h5 {
+.seemore > h6 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -157,11 +157,56 @@ div.polaroid {
   background-color: #122346;
 }
 
+@media screen and (max-width: 1200px){
+  .poplist {
+    overflow-x: scroll;
+  }
+}
+
+#footer > h5, #footer > h6 {
+  color: white;
+}
+
 .socials {
   font-size: 2em;
 }
 
-a.nostyle {
+a {
   text-decoration: inherit;
   color: inherit;
+}
+
+.quick-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mapouter {
+  position:relative;
+  text-align:right;
+  width:100%;
+}
+
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  width:100%;
+}
+
+.modal {
+  height: 90%;
+}
+
+.modal-body {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.bold-h, .bold {
+  font-family: bold-text;
+}
+
+.card {
+  height: 100%;
 }
