@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header {
-  height: 700px;
+  height: 600px;
   min-height: 550px;
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #222), url(assets/hero_image.png), linear-gradient(180deg, #eb5757, #eb5757);
   background-position: 0px 0px, 100% 30%, 0px 0px;
@@ -262,7 +262,7 @@ a {
 #sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #262933;
+  background: #122346;
   color: #fff;
   transition: all 0.4s;
   height: 100vh;
@@ -276,7 +276,7 @@ a {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #1b1d24;
+  background: #122346;
 }
 
 #sidebar ul.components {
@@ -296,14 +296,14 @@ a {
 }
 
 #sidebar ul li a:hover {
-  color: #262933;
+  color: #122346;
   background: #fff;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: #1b1d24;
+  background: #122346;
 }
 
 a[data-toggle="collapse"] {
@@ -321,7 +321,8 @@ a[data-toggle="collapse"] {
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: #1b1d24;
+  background: #122346;
+  list-style-type: none;
 }
 
 #content {
@@ -334,8 +335,10 @@ ul ul a {
 }
 
 #sidebarCollapse {
-  background-color: salmon;
-  z-index: 999;
+  background-color: #122346;
+  width: 20px;
+  height: 50px;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
