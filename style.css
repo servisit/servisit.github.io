@@ -25,12 +25,19 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(237, 87, 87);
 }
 
+@media screen and (max-width: 1200px){
+  #main-nav {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 #header {
   height: 700px;
   min-height: 550px;
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #222), url(assets/hero_image.png), linear-gradient(180deg, #eb5757, #eb5757);
   background-position: 0px 0px, 100% 30%, 0px 0px;
-  background-size: auto, auto, auto;
+  background-size: auto, auto, 50%;
   background-repeat: repeat, no-repeat, repeat;
   background-attachment: scroll, fixed, scroll;
 
@@ -45,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 300px;
   text-shadow: 2px 2px 5px #222;
 }
+
 #logo-container > p {
   margin-bottom: 25px;
   color: #f9f9f9;
@@ -110,13 +118,45 @@ div.polaroid {
   color: black
 }
 
+div.polaroid-how {
+  width: 25%;
+  min-width: 200px;
+  background-color: white;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 500ms;
+}
+
+.polaroid-how > p {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.polaroid-how > a {
+  text-decoration: none;
+  color: black
+}
+
 .poplist {
+  display: flex;
+  padding: 5px;
+}
+
+.poplist-how {
   display: flex;
   padding: 5px;
 }
 
 @media screen and (max-width: 1200px){
   .poplist {
+    overflow-x: scroll;
+  }
+
+  .poplist-how {
     overflow-x: scroll;
   }
 }
@@ -211,4 +251,103 @@ a {
 
 .card {
   height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #262933;
+  color: #fff;
+  transition: all 0.4s;
+  height: 100vh;
+  min-height: 100vh;
+
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #1b1d24;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  /* border-bottom: 1px solid #47748b; */
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #262933;
+  background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #1b1d24;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #1b1d24;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  height: 100vh;
+  transition: all 0.4s;
+
+  overflow-y: scroll;
+}
+
+#sidebarCollapse {
+  background-color: salmon;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+}
+
+.bi-justify {
+  color:white
 }
