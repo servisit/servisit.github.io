@@ -42,102 +42,81 @@
 </head>
 <body>
 
-  <nav id = "main-nav" class="navbar navbar-expand-sm navbar-dark sticky-top px-5">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="javascript:void(0)">
-        <img src="assets/servisit_logo_white.png" alt="Avatar Logo" style="height:20px;"> 
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse clearfix" id="mynavbar">
-        <ul class="navbar-nav ms-auto me-2 text-center">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://tally.so#tally-open=mOW67m&tally-layout=modal&tally-align-left=1&tally-auto-close=0">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.facebook.com/servisitph/about/?ref=page_internal" target = "_blank">About Us</a>
-          </li>
-        </ul>
-        <div class="d-flex">
-          <a href = "https://tally.so#tally-open=mR7AJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0" class="btn third-btn mx-auto btn-sm" type="button" target = "_blank">Partner with Us!</a>
+<nav id = "main-nav" class="navbar navbar-expand-sm navbar-dark sticky-top px-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">
+      <img src="assets/servisit_logo_white.png" alt="Avatar Logo" style="height:20px;"> 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse clearfix" id="mynavbar">
+      <ul class="navbar-nav ms-auto me-2 text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://tally.so#tally-open=mOW67m&tally-layout=modal&tally-align-left=1&tally-auto-close=0">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/servisitph/about/?ref=page_internal" target = "_blank">About Us</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <a href = "https://tally.so#tally-open=mR7AJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0" class="btn third-btn mx-auto btn-sm" type="button" target = "_blank">Partner with Us!</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id = "service-header" class = "position-relative mb-5 bg-dark">
+  <div id = "logo-container" class = "container-fluid ms-5 p-4">
+    <h1 id = "tagline">Services</h1> 
+  </div>
+  
+</div>
+
+<div id = "main-content" class = "container w-75">
+  <div class = "row">
+    <div class = "col-md-4">
+      <div class="card">
+        <img src="assets/services/computer-header.jpg" class="card-img-top" alt="Computer Services">
+        <div class="card-body pe-4">
+          <h3 class="card-title">Computer Services</h3>
+          <ul>
+            <li>Computer Troubleshooting and Repair</li>
+            <li>Computer Upgrade</li>
+            <li><a href = "services/computer_services/computer_clean.html">Computer Cleaning</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </nav>
-
-<div class="wrapper mb-3">
-  <nav id="sidebar">
-    <div class="sidebar-header">
-      <h3>Bootstrap Slider</h3>
+    <div class = "col-md-4">
+      <div class="card">
+        <img src="assets/services/construction-header.jpg" class="card-img-top" alt="Construction">
+        <div class="card-body pe-4">
+          <h3 class="card-title">Construction</h3>
+          <ul>
+            <li>Construction Manpower</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <ul class="lisst-unstyled components">
-      <p>Menu List</p>
-      <li class="active">
-        <a href="#foodSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Food Menu</a>
-        <ul class="collapse lisst-unstyled" id="foodSubmenu">
-          <li><a href="#">All Menu</a></li>
-          <li><a href="#">Food</a></li>
-          <li><a href="#">Drink</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">History</a>
-      </li>
-      <li>
-        <a href="#">Add</a>
-      </li>
-    </ul>
-  </nav>
-  <nav class="navbar navbar-expand-lg">
-      <button type="button" id="sidebarCollapse" class="btn btn-dark position-absolute">
-        <i id = "caret-icon"></i>
-      </button>
-  </nav>
-
-  <div id="content">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
-      </ol>
-    </nav>
-    <h2>Collapseible Sidebar using Bootstrap 4.5.x</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ipsum cumque nemo architecto laboriosam perspiciatis consequatur atque quidem vel excepturi distinctio recusandae reprehenderit vitae, libero unde ea temporibus quaerat animi ducimus ratione esse? Aspernatur magnam facere suscipit vitae itaque maxime quo amet officiis animi, harum et inventore delectus nihil cumque!</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sit nostrum aliquid mollitia optio veniam at excepturi vitae sint laudantium fugit ratione molestias, doloremque cumque eaque eligendi nobis quia. Labore officiis quisquam officia dolore! Eos labore, alias, voluptatem maxime sunt culpa dolorum at quam architecto impedit cupiditate quis ipsum odit, necessitatibus accusantium quod quo molestias enim laboriosam! Maiores facere accusamus repellat saepe enim omnis perspiciatis dolor, cupiditate ex doloremque laudantium similique sunt quisquam! Quaerat, facere ipsum natus officia cupiditate repellendus.</p>
-
-    <div class="line"></div>
-    <h3>Lorem Ipsum</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptas consequuntur laboriosam quia vero corporis, officiis, dolore natus iste incidunt animi dolor porro accusamus similique aut, facilis architecto quas? Assumenda mollitia error vel blanditiis perferendis quis sequi deleniti repellat laboriosam!</p>
-
-    <h2>Collapseible Sidebar using Bootstrap 4.5.x</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ipsum cumque nemo architecto laboriosam perspiciatis consequatur atque quidem vel excepturi distinctio recusandae reprehenderit vitae, libero unde ea temporibus quaerat animi ducimus ratione esse? Aspernatur magnam facere suscipit vitae itaque maxime quo amet officiis animi, harum et inventore delectus nihil cumque!</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sit nostrum aliquid mollitia optio veniam at excepturi vitae sint laudantium fugit ratione molestias, doloremque cumque eaque eligendi nobis quia. Labore officiis quisquam officia dolore! Eos labore, alias, voluptatem maxime sunt culpa dolorum at quam architecto impedit cupiditate quis ipsum odit, necessitatibus accusantium quod quo molestias enim laboriosam! Maiores facere accusamus repellat saepe enim omnis perspiciatis dolor, cupiditate ex doloremque laudantium similique sunt quisquam! Quaerat, facere ipsum natus officia cupiditate repellendus.</p>
-
-    <div class="line"></div>
-    <h3>Lorem Ipsum</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptas consequuntur laboriosam quia vero corporis, officiis, dolore natus iste incidunt animi dolor porro accusamus similique aut, facilis architecto quas? Assumenda mollitia error vel blanditiis perferendis quis sequi deleniti repellat laboriosam!</p>
-
-    <h2>Collapseible Sidebar using Bootstrap 4.5.x</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ipsum cumque nemo architecto laboriosam perspiciatis consequatur atque quidem vel excepturi distinctio recusandae reprehenderit vitae, libero unde ea temporibus quaerat animi ducimus ratione esse? Aspernatur magnam facere suscipit vitae itaque maxime quo amet officiis animi, harum et inventore delectus nihil cumque!</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sit nostrum aliquid mollitia optio veniam at excepturi vitae sint laudantium fugit ratione molestias, doloremque cumque eaque eligendi nobis quia. Labore officiis quisquam officia dolore! Eos labore, alias, voluptatem maxime sunt culpa dolorum at quam architecto impedit cupiditate quis ipsum odit, necessitatibus accusantium quod quo molestias enim laboriosam! Maiores facere accusamus repellat saepe enim omnis perspiciatis dolor, cupiditate ex doloremque laudantium similique sunt quisquam! Quaerat, facere ipsum natus officia cupiditate repellendus.</p>
-
-    <div class="line"></div>
-    <h3>Lorem Ipsum</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptas consequuntur laboriosam quia vero corporis, officiis, dolore natus iste incidunt animi dolor porro accusamus similique aut, facilis architecto quas? Assumenda mollitia error vel blanditiis perferendis quis sequi deleniti repellat laboriosam!</p>
-
+    <div class = "col-md-4">
+      <div class="card">
+        <img src = "assets/services/electrical-header.jpg" class="card-img-top" alt="Electrical Services">
+        <div class="card-body pe-4">
+          <h3 class="card-title">Electrical Services</h3>
+          <ul>
+            <li>Electrical Manpower</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>
 
 <div id = "footer" class="mt-5 p-4 text-white">
