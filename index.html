@@ -10,6 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <script async src="https://tally.so/widgets/embed.js"></script>
   <link rel = "stylesheet" href = "style.css">
 </head>
@@ -29,17 +31,17 @@
           <a class="nav-link active" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.facebook.com/servisitph/services/?ref=page_internal" target = "_blank">Services</a>
+          <a class="nav-link" href="service_list.html">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://tally.so#tally-open=w4gNb3&tally-layout=modal&tally-align-left=1&tally-auto-close=0">Contact Us</a>
+          <a class="nav-link" href="https://tally.so#tally-open=mOW67m&tally-layout=modal&tally-align-left=1&tally-auto-close=0">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://www.facebook.com/servisitph/about/?ref=page_internal" target = "_blank">About Us</a>
         </li>
       </ul>
       <div class="d-flex">
-        <a href = "https://linktr.ee/servisit" class="btn third-btn mx-auto btn-sm" type="button" target = "_blank">Partner with Us!</a>
+        <a href = "https://tally.so#tally-open=mR7AJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0" class="btn third-btn mx-auto btn-sm" type="button" target = "_blank">Partner with Us!</a>
       </div>
     </div>
   </div>
@@ -62,7 +64,7 @@
   <div class = "poplist mb-5">
 
     <div class="polaroid rounded-1">
-      <a href = "https://tally.so#tally-open=wo4ROn&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
+      <a href = "https://tally.so#tally-open=mVkKJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
         <img src="assets/services/computer-repair.jpg" alt="Computer Troubleshoot and Repair" style="width:100%" class = "rounded-1">
         <div class="container">
           <p>Computer Troubleshoot and Repair</p>
@@ -72,7 +74,7 @@
     </div>
 
     <div class="polaroid rounded-1">
-      <a href = "https://tally.so#tally-open=wo4ROn&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
+      <a href = "https://tally.so#tally-open=mVkKJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
         <img src="assets/services/computer-upgrade.jpg" alt="Computer Upgrade" style="width:100%" class = "rounded-1">
         <div class="container">
           <p>Computer Upgrade</p>
@@ -81,7 +83,7 @@
     </div>
 
     <div class="polaroid rounded-1">
-      <a href = "https://tally.so#tally-open=wo4ROn&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
+      <a href = "https://tally.so#tally-open=mVkKJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
         <img src="assets/services/computer-clean.jpg" alt="Computer Cleaning" style="width:100%" class = "rounded-1">
         <div class="container">
           <p>Computer Cleaning</p>
@@ -90,7 +92,7 @@
     </div>
 
     <div class="polaroid rounded-1">
-      <a href = "https://tally.so#tally-open=wo4ROn&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
+      <a href = "https://tally.so#tally-open=mVkKJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0">
         <img src="assets/services/construction.jpg" alt="Construction Manpower" style="width:100%" class = "rounded-1">
         <div class="container">
           <p>Construction Manpower</p>
@@ -99,10 +101,10 @@
     </div>
 
     <div class="polaroid rounded-1">
-      <a href = "https://www.facebook.com/servisitph/services/?ref=page_internal" class = "seemore">
+      <a href = "service_list.html" class = "seemore">
         <img src="assets/servisit_icon.png" alt="Servisit" style="width:100%">
       </a>
-      <a href = "https://www.facebook.com/servisitph/services/?ref=page_internal" class = "seemore">
+      <a href = "service_list.html" class = "seemore">
         <h6>See more Services</h6>
       </a>
       
@@ -206,7 +208,7 @@
         <a href = "https://www.instagram.com/servisitph" target="_blank" class = "px-2">
           <i class = "bi bi-instagram socials flex-fill"></i>
         </a>
-        <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=servisitph@gmail.com&su=BOOKING" target="_blank" class = "px-2">
+        <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=servisitph@gmail.com" target="_blank" class = "px-2">
           <i class = "bi bi-google socials flex-fill"></i>
         </a>
       </div>
@@ -399,7 +401,19 @@
     </div>
   </div>
 </div>
+<script>
+  $(document).ready(function() {
 
+    if(window.location.href.indexOf('#tos') > -1) {
+      $("#tos").modal('show');
+    }
+
+    if(window.location.href.indexOf('#pp') > -1) {
+      $("#pp").modal('show');
+    }
+
+  });
+</script>
 
 </body>
 </html>
