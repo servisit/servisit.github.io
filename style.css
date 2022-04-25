@@ -199,6 +199,14 @@ div.polaroid-how {
   background-color: #122346;
 }
 
+#footer a {
+  color: white;
+}
+
+#footer a:hover {
+  color: salmon;
+}
+
 @media screen and (max-width: 1200px){
   .poplist {
     overflow-x: scroll;
@@ -213,7 +221,7 @@ div.polaroid-how {
   font-size: 2em;
 }
 
-a {
+a , a:hover{
   text-decoration: inherit;
   color: salmon;
 }
@@ -275,13 +283,17 @@ a {
 }
 
 #sidebar .sidebar-header {
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+
   background: #122346;
+  vertical-align: text-bottom;
 }
 
 #sidebar ul.components {
-  padding: 20px 0;
+  padding-left : 0px;
   /* border-bottom: 1px solid #47748b; */
+  list-style-type: none;
 }
 
 #sidebar ul p {
@@ -320,7 +332,7 @@ a[data-toggle="collapse"] {
 
 ul ul a {
   font-size: 0.9em !important;
-  padding-left: 30px !important;
+  /* padding-left: 30px !important; */
   background: #122346;
   list-style-type: none;
 }
@@ -328,10 +340,13 @@ ul ul a {
 #content {
   width: 100%;
   padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+
   height: 100vh;
   transition: all 0.4s;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #sidebarCollapse {
@@ -339,18 +354,49 @@ ul ul a {
   width: 20px;
   height: 50px;
   padding: 0;
+
+  transition: all 0.4s;
 }
+
 
 @media (max-width: 768px) {
   #sidebar {
     margin-left: -250px;
+    position: absolute;
+    z-index: 999;
   }
 
   #sidebar.active {
     margin-left: 0;
+    position: absolute;
+    z-index: 999;
   }
 }
 
 .bi-justify {
   color:white
+}
+
+.img-thumbnail {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dim {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }

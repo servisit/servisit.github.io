@@ -18,22 +18,30 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
   <script>
     $(document).ready(function() {
-      if($("#sidebar").hasClass("active")){
-        $("#caret-icon").removeClass("bi-caret-left-fill");
-        $("#caret-icon").addClass("bi-caret-right-fill");
-      }else{
-        $("#caret-icon").removeClass("bi-caret-right-fill");
-        $("#caret-icon").addClass("bi-caret-left-fill");
-      }
-
       $("#sidebarCollapse").on('click',function() {
         $("#sidebar").toggleClass('active');
-        if($("#sidebar").hasClass("active")){
-          $("#caret-icon").removeClass("bi-caret-left-fill");
-          $("#caret-icon").addClass("bi-caret-right-fill");
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          if($("#sidebar").hasClass('active')){
+            $("#sidebarCollapse").css("margin-left", "250px")
+            $("#sidebarCollapse").css("z-index", "999")
+            $("#dim").css("display","block")
+          }else{
+            $("#sidebarCollapse").css("margin-left", "0px")
+            $("#dim").css("display","none")
+          }
+        }
+        
+      });
+
+      $("#dim").on('click', function() {
+        $("#sidebar").toggleClass('active', false);
+        if($("#sidebar").hasClass('active')){
+          $("#sidebarCollapse").css("margin-left", "250px")
+          $("#sidebarCollapse").css("z-index", "999")
+          $("#dim").css("display","block")
         }else{
-          $("#caret-icon").removeClass("bi-caret-right-fill");
-          $("#caret-icon").addClass("bi-caret-left-fill");
+          $("#sidebarCollapse").css("margin-left", "0px")
+          $("#dim").css("display","none")
         }
       });
     });
@@ -53,7 +61,7 @@
     <div class="collapse navbar-collapse clearfix" id="mynavbar">
       <ul class="navbar-nav ms-auto me-2 text-center">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="../../index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Services</a>
@@ -75,66 +83,80 @@
 <div class="wrapper mb-3">
   <nav id="sidebar">
     <div class="sidebar-header">
-      <h3>Bootstrap Slider</h3>
+      <h3>Services</h3>
     </div>
     <ul class="lisst-unstyled components">
-      <p>Menu List</p>
       <li class="active">
-        <a href="#foodSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Food Menu</a>
-        <ul class="collapse lisst-unstyled" id="foodSubmenu">
-          <li><a href="#">All Menu</a></li>
-          <li><a href="#">Food</a></li>
-          <li><a href="#">Drink</a></li>
+        <a href="#computer-services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Computer Services</a>
+        <ul class="collapse show lisst-unstyled" id="computer-services">
+          <li><a href="#">Computer Troubleshooting and Repair</a></li>
+          <li><a href="#">Computer Upgrade</a></li>
+          <li class = "active"><a href="#">Computer Cleaning</a></li>
         </ul>
       </li>
       <li>
-        <a href="#">History</a>
+        <a href="#electrical-services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Electrical Services</a>
+        <ul class="collapse lisst-unstyled" id="electrical-services">
+          <li><a href="">Electrical Manpower</a></li>
+        </ul>
       </li>
       <li>
-        <a href="#">Add</a>
+        <a href="#construction" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Construction</a>
+        <ul class="collapse lisst-unstyled" id="construction">
+          <li><a href="">Construction Manpower</a></li>
+        </ul>
       </li>
     </ul>
   </nav>
   <nav class="navbar navbar-expand-lg">
       <button type="button" id="sidebarCollapse" class="btn btn-dark position-absolute">
-        <i id = "caret-icon"></i>
+        <i class = "bi bi-caret-left-fill"></i>
       </button>
   </nav>
 
+  <div id="dim" class="dim">
+  </div>
   <div id="content">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
+        <li class="breadcrumb-item"><a href="../../service_list.html">Services</a></li>
+        <li class="breadcrumb-item"><a href="">Computer Services</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Computer Cleaning</li>
       </ol>
     </nav>
-    <h2>Collapseible Sidebar using Bootstrap 4.5.x</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ipsum cumque nemo architecto laboriosam perspiciatis consequatur atque quidem vel excepturi distinctio recusandae reprehenderit vitae, libero unde ea temporibus quaerat animi ducimus ratione esse? Aspernatur magnam facere suscipit vitae itaque maxime quo amet officiis animi, harum et inventore delectus nihil cumque!</p>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sit nostrum aliquid mollitia optio veniam at excepturi vitae sint laudantium fugit ratione molestias, doloremque cumque eaque eligendi nobis quia. Labore officiis quisquam officia dolore! Eos labore, alias, voluptatem maxime sunt culpa dolorum at quam architecto impedit cupiditate quis ipsum odit, necessitatibus accusantium quod quo molestias enim laboriosam! Maiores facere accusamus repellat saepe enim omnis perspiciatis dolor, cupiditate ex doloremque laudantium similique sunt quisquam! Quaerat, facere ipsum natus officia cupiditate repellendus.</p>
+    <div class = "row">
+      <div class = "col-xl-3">
+        <img src = "../../assets/services/computer-clean.jpg" class = "img-thumbnail" alt = "Computer Cleaning">
+      </div>
+      <div class = "col-xl-9">
+        <h1 class = "mt-3">Computer Cleaning</h1>
+        <h3>Php 600</h3>
+        <a href = "https://tally.so#tally-open=mVkKJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0" type = "button" class = "btn primary-btn btn-lg mt-4">Book Now!</a>
 
-    <div class="line"></div>
-    <h3>Lorem Ipsum</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptas consequuntur laboriosam quia vero corporis, officiis, dolore natus iste incidunt animi dolor porro accusamus similique aut, facilis architecto quas? Assumenda mollitia error vel blanditiis perferendis quis sequi deleniti repellat laboriosam!</p>
+        <h3 class = "mt-5">Service Provider's Arrival</h3>
+        <ol>
+          <li>Confirmation of Identities</li>
+          <li>Confirmation of Address</li>
+          <li>Consulation with the Client</li>
+        </ol>
 
-    <h2>Collapseible Sidebar using Bootstrap 4.5.x</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ipsum cumque nemo architecto laboriosam perspiciatis consequatur atque quidem vel excepturi distinctio recusandae reprehenderit vitae, libero unde ea temporibus quaerat animi ducimus ratione esse? Aspernatur magnam facere suscipit vitae itaque maxime quo amet officiis animi, harum et inventore delectus nihil cumque!</p>
+        <h3 class = "mt-4">During the Service</h3>
+        <ol>
+          <li>Inspection of unit</li>
+          <li>Informing the client regarding the course of action</li>
+          <li>Cleaning of computer</li>
+          <li>Client testing</li>
+        </ol>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sit nostrum aliquid mollitia optio veniam at excepturi vitae sint laudantium fugit ratione molestias, doloremque cumque eaque eligendi nobis quia. Labore officiis quisquam officia dolore! Eos labore, alias, voluptatem maxime sunt culpa dolorum at quam architecto impedit cupiditate quis ipsum odit, necessitatibus accusantium quod quo molestias enim laboriosam! Maiores facere accusamus repellat saepe enim omnis perspiciatis dolor, cupiditate ex doloremque laudantium similique sunt quisquam! Quaerat, facere ipsum natus officia cupiditate repellendus.</p>
-
-    <div class="line"></div>
-    <h3>Lorem Ipsum</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptas consequuntur laboriosam quia vero corporis, officiis, dolore natus iste incidunt animi dolor porro accusamus similique aut, facilis architecto quas? Assumenda mollitia error vel blanditiis perferendis quis sequi deleniti repellat laboriosam!</p>
-
-    <h2>Collapseible Sidebar using Bootstrap 4.5.x</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero ipsum cumque nemo architecto laboriosam perspiciatis consequatur atque quidem vel excepturi distinctio recusandae reprehenderit vitae, libero unde ea temporibus quaerat animi ducimus ratione esse? Aspernatur magnam facere suscipit vitae itaque maxime quo amet officiis animi, harum et inventore delectus nihil cumque!</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sit nostrum aliquid mollitia optio veniam at excepturi vitae sint laudantium fugit ratione molestias, doloremque cumque eaque eligendi nobis quia. Labore officiis quisquam officia dolore! Eos labore, alias, voluptatem maxime sunt culpa dolorum at quam architecto impedit cupiditate quis ipsum odit, necessitatibus accusantium quod quo molestias enim laboriosam! Maiores facere accusamus repellat saepe enim omnis perspiciatis dolor, cupiditate ex doloremque laudantium similique sunt quisquam! Quaerat, facere ipsum natus officia cupiditate repellendus.</p>
-
-    <div class="line"></div>
-    <h3>Lorem Ipsum</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptas consequuntur laboriosam quia vero corporis, officiis, dolore natus iste incidunt animi dolor porro accusamus similique aut, facilis architecto quas? Assumenda mollitia error vel blanditiis perferendis quis sequi deleniti repellat laboriosam!</p>
+        <h3 class = "mt-4">After the Service</h3>
+        <ol>
+          <li>Inform the client regarding the details of the finished service</li>
+          <li>Receiving of Payment</li>
+        </ol>
+        
+      </div>
+    </div>
 
   </div>
 
