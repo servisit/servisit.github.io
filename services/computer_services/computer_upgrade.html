@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Servisit: We let services visit you</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel = "icon" href = "../../assets/tab_icon.png.png"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <link rel = "stylesheet" href = "../../style.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $("#sidebarCollapse").on('click',function() {
+        $("#sidebar").toggleClass('active');
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          if($("#sidebar").hasClass('active')){
+            $("#sidebarCollapse").css("margin-left", "250px")
+            $("#sidebarCollapse").css("z-index", "999")
+            $("#dim").css("display","block")
+          }else{
+            $("#sidebarCollapse").css("margin-left", "0px")
+            $("#dim").css("display","none")
+          }
+        }
+        
+      });
+
+      $("#dim").on('click', function() {
+        $("#sidebar").toggleClass('active', false);
+        if($("#sidebar").hasClass('active')){
+          $("#sidebarCollapse").css("margin-left", "250px")
+          $("#sidebarCollapse").css("z-index", "999")
+          $("#dim").css("display","block")
+        }else{
+          $("#sidebarCollapse").css("margin-left", "0px")
+          $("#dim").css("display","none")
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+<nav id = "main-nav" class="navbar navbar-expand-sm navbar-dark sticky-top px-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">
+      <img src="../../assets/servisit_logo_white.png" alt="Avatar Logo" style="height:20px;"> 
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse clearfix" id="mynavbar">
+      <ul class="navbar-nav ms-auto me-2 text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://tally.so#tally-open=mOW67m&tally-layout=modal&tally-align-left=1&tally-auto-close=0">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/servisitph/about/?ref=page_internal" target = "_blank">About Us</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <a href = "https://tally.so#tally-open=mR7AJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0" class="btn third-btn mx-auto btn-sm" type="button" target = "_blank">Partner with Us!</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper mb-3">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>Services</h3>
+    </div>
+    <ul class="lisst-unstyled components">
+      <li class="active">
+        <a href="#computer-services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Computer Services</a>
+        <ul class="collapse show lisst-unstyled" id="computer-services">
+          <li><a href="computer_repair.html">Computer Troubleshooting and Repair</a></li>
+          <li class = "active"><a href="#">Computer Upgrade</a></li>
+          <li><a href="computer_clean.html">Computer Cleaning</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#electrical-services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Electrical Services</a>
+        <ul class="collapse lisst-unstyled" id="electrical-services">
+          <li><a href="">Electrical Manpower</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#construction" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Construction</a>
+        <ul class="collapse lisst-unstyled" id="construction">
+          <li><a href="">Construction Manpower</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#home-services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home Services</a>
+        <ul class="collapse lisst-unstyled" id="home-services">
+          <li><a href="">Painting</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar navbar-expand-lg">
+      <button type="button" id="sidebarCollapse" class="btn btn-dark position-absolute">
+        <i class = "bi bi-caret-left-fill"></i>
+      </button>
+  </nav>
+
+  <div id="dim" class="dim">
+  </div>
+  <div id="content">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../service_list.html">Services</a></li>
+        <li class="breadcrumb-item"><a href="">Computer Services</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Computer Upgrade</li>
+      </ol>
+    </nav>
+
+    <div class = "row">
+      <div class = "col-xl-3">
+        <img src = "../../assets/services/computer-upgrade.jpg" class = "img-thumbnail" alt = "Computer Upgrade">
+      </div>
+      <div class = "col-xl-9">
+        <h1 class = "mt-3">Computer Upgrade</h1>
+        <h3>Php 600</h3>
+        <p><span class = "bold">Serviceable Locations: </span>Naga, Pili, Canaman*, Magarao*, Bombon*, Calabanga*</p>
+        <a href = "https://tally.so#tally-open=mVkKJ3&tally-layout=modal&tally-align-left=1&tally-auto-close=0" type = "button" class = "btn primary-btn btn-lg">Book Now!</a>
+
+        <h3 class = "mt-4">Service Provider's Arrival</h3>
+        <ol>
+          <li>Confirmation of Identities</li>
+          <li>Confirmation of Address</li>
+          <li>Consulation with the Client</li>
+        </ol>
+
+        <h3 class = "mt-4">During the Service</h3>
+        <ol>
+          <li>Inspection of unit</li>
+          <li>Informing the client regarding the course of action</li>
+          <li>Purchasing of parts and showing of receipt</li>
+          <li>*File backup</li>
+          <li>*Cleaning of computer</li>
+          <li>Part installation</li>
+          <li>Client testing</li>
+        </ol>
+
+        <h3 class = "mt-4">After the Service</h3>
+        <ol>
+          <li>Inform the client regarding the details of the finished service</li>
+          <li>Receiving of Payment</li>
+        </ol>
+        
+        <p class = "bold">*Additional costs may apply.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div id = "footer" class="mt-5 p-4 text-white">
+  <div class = "row mx-3 my-3 gx-5">
+    <div class = "col-md-3">
+      <h4>Our Mission</h4>
+      <p style = "text-align: justify;">Our mission is to make availing of reliable services easy and convenient whilst uplifting the lives of our dependable providers by giving them more opportunities and benefits.</p>
+    </div>
+
+    <div class = "col-md-6">
+      <h4>Quick Links</h4>
+      <div class = "row">
+        <div class = "col-md-6">
+          <h5 class = "text-white">Home</h5>
+
+          <h6 class = "text-white">Popular Services</h6>
+          <ul class = "quick-links">
+            <li><a href = "services/computer_services/computer_repair.html">Computer Troubleshooting and Repair</a></li>
+            <li><a href = "services/computer_services/computer_upgrade.html">Computer Upgrade</a></li>
+            <li><a href = "services/computer_services/computer_clean.html">Computer Cleaning</a></li>
+            <li><a href = "">Construction Manpower</a></li>
+          </ul>
+        </div>
+
+        <div class = "col-md-6">
+          <h5 class = "text-white">Services</h5>
+
+          <h6 class = "text-white">Computer Services</h6>
+          <ul class = "quick-links">
+            <li><a href = "services/computer_services/computer_repair.html">Computer Troubleshooting and Repair</a></li>
+            <li><a href = "services/computer_services/computer_upgrade.html">Computer Upgrade</a></li>
+            <li><a href = "services/computer_services/computer_clean.html">Computer Cleaning</a></li>
+          </ul>
+
+          <h6 class = "text-white mt-3">Electrical Services</h6>
+          <ul class = "quick-links">
+            <li><a href = "">Electrical Manpower</a></li>
+          </ul>
+
+          <h6 class = "text-white mt-3">Construction</h6>
+          <ul class = "quick-links">
+            <li><a href = "">Construction Manpower</a></li>
+          </ul>
+          
+          <h6 class = "text-white mt-3">Home Services</h6>
+          <ul class = "quick-links">
+            <li><a href = "">Painting</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    <div class = "col-md-3">
+      <h4>Stay in touch!</h4>
+      <div>
+        <a href = "https://www.facebook.com/servisitph" target="_blank" class = "px-2">
+          <i class = "bi bi-facebook socials"></i>
+        </a>
+        <a href = "https://www.instagram.com/servisitph" target="_blank" class = "px-2">
+          <i class = "bi bi-instagram socials flex-fill"></i>
+        </a>
+        <a href = "https://mail.google.com/mail/?view=cm&fs=1&to=servisitph@gmail.com" target="_blank" class = "px-2">
+          <i class = "bi bi-google socials flex-fill"></i>
+        </a>
+      </div>
+
+      <h4 class = "mt-3">Visit Us!</h4>
+      <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:300px;height:200px;">
+        <div id="embeddedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+          <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Naga+college+foundation+annex&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+        </div><a class="embeddedmap-code" rel="nofollow" href="https://www.embed-map.com" id="grabmaps-authorization">https://www.embed-map.com</a>
+        <style>.map-generator{max-width: 100%; max-height: 100%; background: none;}</style>
+      </div>
+    </div>
+  </div>
+
+  <div class = "container text-center">
+    <a href = "#sitemap" data-bs-toggle = "modal">Sitemap</a> |
+    <a href = "#tos" data-bs-toggle="modal">Terms of Service</a> |
+    <a href = "#pp" data-bs-toggle="modal">Privacy Policy</a> |
+    <a href = "#">&copy; 2022 Servisit</a>
+  </div>
+</div>
+
+<!-- Modals -->
+<!-- tos modal -->
+<div class="modal" id="tos">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Terms of Service</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p>Last updated on April 12, 2022</p>
+
+        <p>Welcome to Servisit by the Servisit Team, we provide our services through the Servisit Facebook Page alongside its tools such as Messenger, SMS, Calls, and Email. The Terms of Service in using our services will be stated here. If you choose to use Servisit alongside its tools and services, it is assumed that you have read and agreed to all of the Terms and Conditions and Privacy Policy of not only Servisit but as well as the tools it uses. If you do not agree with any one of the Terms and Conditions and Privacy Policy you should immediately stop using Servisit, its tools, and its services.</p>
+        <p>Supplemental Policies may be posted from time to time are hereby expressly incorporated herein by reference. We reserve the right, in our sole discretion, to make changes or modifications to these at any time and for any reason.</p>
+        <p>Every time you book through us, we will send you an updated version of the Terms of Service and Privacy Policy and it is your responsibility to periodically review these, and by using our services you will be subjected to have been made aware of and to have accepted the changes.</p> 
+        <h6 class = "bold-h">Definition of terms</h6>
+        <p><span class = "bold">Platform:</span>The Servisit Facebook Page alongside its tools (SMS, Calls and Emails) it uses to provide you its services.</p>
+        <p><span class = "bold">Servisitor/s:</span> They are an individual or a group of individuals who offer services to the customers, in other words they are the Service Providers one can find using the platform.</p>
+        <p>Servisitor Profile:</span> These are Servisitor details that may include their type of service, job experience, and certifications.</p>
+        <p><span class = "bold">User/s:</span> They are the people and/or businesses who find, and book services on the platform and avail services from the service provider.</p>
+        <p></p>
+        
+        <p><span class = "bold">Supplemental Policies:</span> These are guidelines and rules other than the Terms and Conditions stated that are used to aid the user and Servisitor.when using the platform, its services, and the services of the Servisitors.</p>
+
+        <h6 class = "bold-h">User Representations</h6>
+        <p>By using the Platform, you represent and warrant that:</p>
+        <ul>
+          <li>You are not under the age of 13;</li>
+          <li>If you're a minor, you have received parental permission to use the Platform;</li>
+          <li>You are or planning to be a User or a Servisitor;</li>
+          <li>All required information you provide through the booking process is true, accurate, enough, and complete; and, </li>
+          <li>You will maintain the accuracy of such information and promptly update such information as necessary.</li>
+        </ul>
+        
+        <h6 class = "bold-h">Permitted Use</h6>
+        <p>You may not access or use the Platform for any purpose other than finding and booking of services and Servisitors. As a user of the Platform, you agree not to:</p>
+        <ul>
+          <li>retrieve data or other content from the Platform to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from the Servisit Team, the Servisitors, and other partners of Servisit;</li>
+          <li>make any unauthorised use of the Platform, including collecting personal information of User/s, the Servisit Team, Serivistors, and other partners of Servisit such as, but not limited to, e-mails and phone numbers by electronic or other means for the purpose of sending unsolicited emails, texts, or any other purpose unrelated to finding, booking, and availing services;</li>
+          <li>trick, defraud, or mislead the Servisit Team and Servisitors, especially in any attempt to learn sensitive information;</li>
+          <li>make improper use of our support services or submit false reports of abuse or misconduct;</li>
+          <li>interfere with, disrupt, or create an undue burden on the Platform;</li>
+          <li>use any information obtained from the Platform in order to harass, abuse, or harm another person;</li>
+          <li>use the Platform as part of any effort to compete with Servisit or otherwise use the Platform and/or the Content for any revenue-generating endeavour or commercial enterprise.</li>
+          <li>harass, annoy, intimidate, or threaten any of our staff, Servisitors, or partners;</li>
+          <li>upload or transmit (or an attempt to upload or transmit) any files that are unrelated, offensive, and harmful through the booking process;</li>
+          <li>disparage, tarnish, or otherwise harm, in our opinion, us and/or the Platform.</li>
+          <li>use the Platform in a manner inconsistent with any applicable laws or regulations.</li>
+          <li>use the Platform or use the services provided by Servisitors for any illegal or unauthorised purpose;</li>
+          <li>contact Servisitor/s directly to avail services.</li>
+        </ul>
+
+        <h6 class = "bold-h">Modifications and Interruptions</h6>
+        <p>We reserve the right to change, modify, or remove the contents of the Platform at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Platform. We also reserve the right to modify or discontinue all or part of the Platform without notice at any time.</p>
+        <p>We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Platform.</p>
+        <p>We cannot guarantee the Platform will be available at all times. There may be scenarios wherein we will suspend the Platform as necessary due to unforeseen hardware, software or other issues and problems resulting in interruptions, delays, or errors.</p>
+        <p>We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Platform at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Platform during any downtime or discontinuance of the Platform.</p>
+        <p>Nothing in these Terms and Conditions will be construed to obligate us to maintain and support the Platform or to supply any corrections, updates, or releases in connection therewith.</p>
+
+        <h6 class = "bold-h">Corrections</h6>
+        <p>There is a possibility that the platform will not be free from errors, defects, viruses, or other harmful things that may potentially affect the user. We shall practice the right to the following as soon as possible:</p>
+        <ul>
+          <li>correct those stated any time without prior notice,</li>
+          <li>monitor and control activities, content, and materials on the platform,</li>
+          <li>investigate violations of the Terms of Service that are stated here as well as take appropriate actions such as the suspension, or discontinuation of access of a customer to the platform or a service provider's services to be offered if they violate the terms of use,</li>
+          <li>report violations that are suspected to be against applicable laws, statutes, or regulations to authorities as well as cooperate with said authorities, and</li>
+          <li>to ask for information and data from you that is needed to avail services using the platform and to exercise our rights stated if you don't provide us with needed information, or if the information is provided and is suspected or deemed to be inaccurate, false, and fraudulent information.</li>
+        </ul>
+
+        <h6 class = "bold-h">Disclaimer</h6>
+        <p>Servisit is merely an online platform that connects its Users to Servisitors, and is not a Service Provider itself. We provide you with the portfolio of the Service provider so that you can properly gauge their capabilities. Given that, Servisit and its team is not responsible or liable for the performance of the service/s done by the Servisitor/s as well as the injuries, accidents, or any activity that happened between the Servisitor and their customer. We only act as a bridge between the User and the Servisitor, the User is not a customer of Servisit when it comes to the services offered by the Servisitor. The User is only the customer of Servisit during the finding and booking process, the user is now the customer of the Servisitor afterwards. You are given the opportunity to rate and review the Service Provider, for this will have an impact on the Service Provider's future customers. </p>
+        <p>In cases wherein the service of the Servisitor is non-satisfactory, or have damaged your property, Servisit will act as a remediator of the User and the Servisitor and a re-service can be done as long as it is within its warranty period (warranty depends on the type of service). If the Servisitor does not uphold their responsibility of fixing the said service, the only remedy possible is a refund of what the User has paid (this is the reason why we highly encourage you to pay through us) and the Servisitor will be removed from Servisit’s list of partners.</p>
+        <p>Lastly, Servisit only provides you with services and Servisitors to choose from and the entire cost only relates to labour and application fees, and does not invclude the following:</p>
+        <ul>
+          <li>materials to be used in the project,</li>
+          <li>tools to aid the service provider, and</li>
+          <li>other incidental expenses (i.e. transportation costs to buy and rent the said tools and materials, etc.).</li>
+        </ul>
+        <p>The items stated above are now the concern of the Userand the Servisitor.</p>
+        
+        <h6 class = "bold-h">Governing Law</h6>
+        <p>These Terms and Conditions and your use of the Platform are governed by and construed in accordance with the laws of the Republic of the Philippine applicable to agreements made and to be entirely performed within the Philippines, without regard to its conflict of law principles.</p>
+        
+        <h6 class = "bold-h">Termination</h6>
+        <p>We may terminate or request you to re-do or edit your booking if we deem it necessary due to:</p>
+        <ul>
+          <li>you’re representing another person or entity without their consent</li>
+          <li>the information you've provided is is false, inaccurate, lacking, misleading, and/or incomplete,</li>
+          <li>the information you've provided is harmful, unrelated, and/or</li>
+          <li>the payment is not provided or is incomplete (if required).</li>
+        </ul>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- pp modal -->
+<div class="modal" id="pp">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Privacy Policy</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p>Last updated on April 16, 2022</p>
+
+        <p>We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last Updated” date of this Privacy Policy. Any changes or modifications will be effective immediately upon sending you the updated Privacy Policy, and you waive the right to receive specific notice of each such change or modification.</p>
+        <p>You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Platform and its services after the date such revised Privacy Policy is posted.</p>
+
+        <h6 class = "bold-h">Collection of your Information</h6>
+        <p>Personally identifiable information, such as, but not limited to, your name, facebook, account, email address, phone number, age, photos, and address, that you voluntarily gave us when inquiring about our services, booking a service, requesting a service, rating a Servisitor, and/or sending feedback to Servisit is required for us to deliver you your service needs and give you a better experience whilst you use our services.</p>
+
+        <h6 class = "bold-h">Use of your Information</h6>
+        <p>We may use the information that you have provided to:</p>
+        <ul>
+          <li>Communicate with you when you inquire or book a service</li>
+          <li>Send you newsletter emails (if ever you have signed up for them)</li>
+          <li>Manage and fulfill your service needs</li>
+          <li>Enable us to let you and the Servisitor communicate</li>
+          <li>Evaluate and improve our Platform, its services, and the services of Servisitors</li>
+          <li>Prevent fraudulent transactions, monitor against theft, and protect against criminal activity.</li>
+          <li>Request your feedback, rating, and recommendations regarding the services of Servisit and Servisitors</li>
+          <li>Troubleshoot problems and resolve disputes</li>
+          <li>Process payments, refunds, and re-service</li>
+        </ul>
+
+        <h6 class = "bold-h">Policy for children</h6>
+        <p>We do not permit the use of our service to children under the age of 13, if there is a situation that Servisit, Servisitors, and Third Party Sites and Companies identifies that a child under the age of 13 has provided us with their personal information, the provided information would be immediately deleted. If you discovered and became aware of any data that we have collected from children under the age of 13, please contact us using the information provided below.</p>
+
+        <h6 class = "bold-h">Servisitors and Third Party Companies</h6>
+        <p>We share your personal information to Servisitors as well as third-party companies to deliver you the services that you have requested.</p>
+
+        <h6 class = "bold-h">Third Party Tools</h6>
+        <p>We use third party tools such as Facebook, Messenger, SMS, Calls, and Email, to provide you with our services. If you then go and use the third party tools that aren't managed by Servisit, do so at your own risk for they are no longer operated by us. When using the Platform we advise you to read the Privacy Policy stated here as well as the privacy policies of the third party tools (as well as Facebook’s) we use. We no longer have control over and are no longer responsible and liable for the content, privacy policies, or practices of any third-party tools or services.</p>
+
+        <h6 class = "bold-h">Security</h6>
+        <p>We value the privacy of the personal information you provide us, with that we do our best to keep safe and protect your data. However, despite our best efforts, no security measures are perfect, secure, and reliable. Servisit, Servisitors, and Third Party Sites and Companies cannot guarantee complete security of the information and data you provide.</p>
+
+        <h6 class = "bold-h">Access to Information</h6>
+        <p>You have the ability to request for your information to be accessed, corrected, amended, transferred, or deleted from our database and from our partners as well as object to how your personal information shall be used. You may exercise this right by contacting us using our contact information.</p>
+        
+        <h6 class = "bold-h">Sale or Bankruptcy</h6>
+        <p>If we reorganise or sell all or a portion of our assets, undergo a merger, or are acquired by another entity, we may transfer your information to the successor entity. If we go out of business or enter bankruptcy, your information would be an asset transferred or acquired by a third party. You acknowledge that such transfers may occur and that the transferee may decline honour commitments we made in this Privacy Policy.</p>
+        <p>We are not responsible for the actions of third parties with whom you share personal or sensitive data, and we have no authority to manage or control third-party solicitations. If you no longer wish to receive correspondence, emails or other communications from third parties, you are responsible for contacting the third party directly.</p>
+        
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

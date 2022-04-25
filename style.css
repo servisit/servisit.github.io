@@ -255,6 +255,7 @@ a , a:hover{
 
 .bold-h, .bold {
   font-family: bold-text;
+  color: salmon;
 }
 
 .card {
