@@ -386,6 +386,10 @@ ul ul a {
     position: absolute;
     z-index: 999;
   }
+
+  #main-content {
+    min-width: 90%;
+  }
 }
 
 .bi-justify {
