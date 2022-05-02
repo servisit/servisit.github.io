@@ -173,6 +173,12 @@ div.polaroid-how {
   .poplist-how {
     overflow-x: scroll;
   }
+
+  .poplist .polaroid:focus,
+  .poplist .polaroid:hover {
+    transform: none;
+    z-index: 99;
+  }
 }
 
 .polaroid:not(:last-child) { margin-right: 10px; }
