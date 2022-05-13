@@ -117,13 +117,21 @@ h1, h2, h3, h4, h5, h6 {
   width: 75%;
 }
 
+.call-to-action{
+  width: 50% !important;
+}
+
 @media screen and (max-width: 1200px){
   #problem div.card-body {
     padding: 2 !important;
   }
 
-  #problem img {
+  #problem{
     width: 100%;
+  }
+
+  .call-to-action{
+    width: 100% !important;
   }
 }
 
