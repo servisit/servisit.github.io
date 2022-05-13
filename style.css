@@ -109,6 +109,24 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+#problem div.card-body {
+  padding: 3;
+}
+
+#problem{
+  width: 75%;
+}
+
+@media screen and (max-width: 1200px){
+  #problem div.card-body {
+    padding: 2 !important;
+  }
+
+  #problem img {
+    width: 100%;
+  }
+}
+
 div.polaroid {
   width: 20%;
   min-width: 200px;
