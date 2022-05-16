@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .call-to-action{
-  width: 50% !important;
+  width: 50%;
 }
 
 @media screen and (max-width: 1200px){
