@@ -208,7 +208,7 @@ div.polaroid-how {
 }
 
 .polaroid:not(:last-child) { margin-right: 10px; }
-
+/* 
 .poplist:focus-within .item,
 .poplist:hover .item {
   transform: translateX(-25%);
@@ -223,7 +223,7 @@ div.polaroid-how {
 .poplist .polaroid:hover {
   transform: scale(1.3);
   z-index: 1;
-}
+} */
 
 .seemore > h6 {
   position: absolute;
