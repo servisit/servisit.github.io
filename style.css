@@ -281,6 +281,12 @@ a , a:hover{
   width:100%;
 }
 
+.service-link, .service-link:hover{
+  text-align: left; 
+  color:salmon;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
 .modal {
   height: 90%;
 }
