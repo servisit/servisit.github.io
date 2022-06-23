@@ -157,10 +157,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      
-
-      
-      
+    </div>
+    <h3 class = "text-center">With overflowing support from:</h3>
+    <div class = "row mb-5">
+      <div class = "col-lg-6">
+        <div class = "row">
+          <div class = "col-md-4">
+            <a href="https://naga.gov.ph/" target = "_blank" title="LGU Naga" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="Strategically located in the heart of the Bicol peninsula, Naga City accounts for Bicol's MOST number of business establishments, even as it is favored by the country's largest companies to be the center of their regional operations in this part of South Luzon.">
+              <img class = "img-fluid" src = "assets/partners/naga_seal.jpg">
+            </a>
+          </div>
+          <div class = "col-md-4">
+            <a href="https://www.facebook.com/MetroNagaChamberofCommerceandIndustry" target = "_blank" title="Metro Naga Chamber of Commerce and Industry" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="The Voice of Business for the socio-economic development of Metro Naga and the Bicol Region.">
+              <img class = "img-fluid" src = "assets/partners/mncci.jpg">
+            </a>
+          </div>
+          <div class = "col-md-4">
+            <a href="https://www.ncf.edu.ph/" target = "_blank" title="Naga College Foundation" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="Since 1947, Naga College Foundation, Inc. (NCF) has been at the forefront of quality education advancement in the Bicol region. NCF maintains its standing in the academic community by molding its students into effective leaders with a strong work ethic and a love of country.">
+              <img class = "img-fluid" src = "assets/partners/ncf.jpeg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-lg-6">
+        <div class = "row">
+          <div class = "col-md-4">
+            <a href="https://www.pandalivery.ph/" target = "_blank" title="Pandalivery" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="We are the fluffiest hyperlocal delivery service in town! We deliver food, groceries, medicine, and shopping right at your doorstep!">
+              <img class = "img-fluid" src = "assets/partners/pandalivery.jpg">
+            </a>
+          </div>
+          <div class = "col-md-4">
+            <a href="https://beecalltbi.carrd.co/" target = "_blank" title="BEECALLtbi" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="BEECALL means Bicol Entrepreneurship and Empowerment Center for Accelerating Local Livelihood. As a technology business incubator, we provide inclusive and long-term growth for Bicolano entrepreneurs and startups through technology, innovation, and pro-active entrepreneurship.">
+              <img class = "img-fluid" src = "assets/partners/beecall.jpg">
+            </a>
+          </div>
+          <div class = "col-md-4">
+            <a href="https://www.facebook.com/Naga-City-Digital-Innovation-Hub-113387073413580/" target = "_blank" title="Naga Digital Innovation Hub" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" data-bs-content="DIH aims to provide facilities, business services, and mentoring to budding technology enterprises even students who intend to fully-develop and commercialize their digital senior projects once they graduate so that they can grow. The hub will also assist the hundreds of online workers currently based in the city.">
+              <img class = "img-fluid" src = "assets/partners/dih.jpg">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="d-flex justify-content-center">
       <a href = "service_list.html" class="btn btn-lg primary-btn call-to-action">Book Now!</a>
@@ -563,6 +600,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
 
   });
+
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
 </script>
 
 </body>
